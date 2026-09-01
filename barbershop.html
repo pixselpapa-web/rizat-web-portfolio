@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Барбершоп «Стриж»</title>
+<meta name="description" content="Мужские стрижки, оформление бороды и уход. Онлайн-запись через WhatsApp.">
+<style>
+:root{--bg:#0e1013;--card:#171a1f;--text:#f5f6f7;--muted:#a5abb4;--accent:#d6b36b;--line:#2b3038}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(14,16,19,.96);border-bottom:1px solid var(--line);z-index:5}
+nav{min-height:68px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;letter-spacing:1px}
+.logo span{color:var(--accent)}nav .links{display:flex;gap:18px}nav a{color:var(--text)}
+.hero{padding:88px 0 66px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.kicker{color:var(--accent);font-weight:800;letter-spacing:1.5px;font-size:13px}
+h1{font-size:58px;line-height:1;margin:14px 0 18px}.hero p,.lead{color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 21px;border-radius:10px;font-weight:800}
+.primary{background:var(--accent);color:#15120b}.secondary{border:1px solid var(--line);color:var(--text)}
+.visual{height:340px;border-radius:26px;background:
+linear-gradient(120deg,transparent 44%,rgba(255,255,255,.06) 45% 47%,transparent 48%),
+radial-gradient(circle at 70% 35%,#d6b36b 0 7%,transparent 8%),
+repeating-linear-gradient(135deg,#1d222a 0 18px,#12151a 18px 36px);
+border:1px solid var(--line);position:relative;overflow:hidden}
+.visual:after{content:"✂";font-size:120px;position:absolute;right:70px;top:90px;color:#d6b36b;transform:rotate(-15deg)}
+section{padding:60px 0}h2{font-size:34px;margin:0 0 8px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:16px}.card h3{margin:0 0 8px}.price{font-size:23px;font-weight:900;color:var(--accent);margin-top:12px}
+.masters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.avatar{height:120px;border-radius:14px;background:linear-gradient(135deg,#2a3039,#171a1f);display:grid;place-items:center;font-size:44px;margin-bottom:14px}
+.contact{background:linear-gradient(135deg,#1a1e24,#121418);border:1px solid var(--line);border-radius:22px;padding:30px}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.cards,.masters{grid-template-columns:1fr 1fr}h1{font-size:42px}.visual{height:250px}nav .links{display:none}}
+@media(max-width:520px){.cards,.masters{grid-template-columns:1fr}h1{font-size:35px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav><div class="logo">БАРБЕРШОП <span>СТРИЖ</span></div><div class="links"><a href="#services">Услуги</a><a href="#masters">Мастера</a><a href="#contact">Запись</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">ДЕМО-САЙТ БАРБЕРШОПА</div>
+<h1>Стрижка, которая выглядит уверенно</h1>
+<p>Мужские стрижки, борода и уход. Удобная запись через WhatsApp и понятные цены на одной странице.</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/77000000000">Записаться</a><a class="btn secondary" href="#services">Цены</a></div>
+</div><div class="visual"></div></div></section>
+
+<section id="services"><div class="wrap"><h2>Услуги</h2><p class="lead">Пример прайса для демонстрации клиенту.</p>
+<div class="cards">
+<div class="card"><h3>Мужская стрижка</h3><p>Консультация, стрижка и укладка.</p><div class="price">4 500 ₸</div></div>
+<div class="card"><h3>Стрижка + борода</h3><p>Комплексный образ за один визит.</p><div class="price">7 000 ₸</div></div>
+<div class="card"><h3>Оформление бороды</h3><p>Форма, контур и укладка.</p><div class="price">3 000 ₸</div></div>
+</div></div></section>
+
+<section id="masters"><div class="wrap"><h2>Наши мастера</h2><p class="lead">Блок можно заменить реальными фото и именами сотрудников.</p>
+<div class="masters">
+<div class="card"><div class="avatar">A</div><h3>Алексей</h3><p>Классические и современные стрижки.</p></div>
+<div class="card"><div class="avatar">M</div><h3>Максим</h3><p>Фейды, текстуры и оформление бороды.</p></div>
+<div class="card"><div class="avatar">D</div><h3>Данияр</h3><p>Стрижки любой сложности и укладка.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact"><h2>Запись за минуту</h2>
+<p class="lead">Ваш город, ул. Примерная, 20 · +7 700 000 00 00 · ежедневно 10:00–21:00</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/77000000000">WhatsApp</a><a class="btn secondary" href="tel:+77000000000">Позвонить</a></div>
+</div></div></section>
+</main><footer><div class="wrap">© 2026 Барбершоп «Стриж». Демо-версия сайта.</div></footer>
+</body></html>

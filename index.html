@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rizat Web — сайты для малого бизнеса</title>
+  <meta name="description" content="Создание простых современных сайтов для малого бизнеса: кафе, автомойки, барбершопы и другие услуги." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg2:#11182c;
+      --card:#151e34;
+      --text:#f5f7fb;
+      --muted:#a9b2c7;
+      --accent:#6ea8fe;
+      --accent2:#8f7cff;
+      --line:#28334f;
+      --ok:#52d68a;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(143,124,255,.14), transparent 30%),
+        radial-gradient(circle at top left, rgba(110,168,254,.12), transparent 25%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6
+    }
+    a{text-decoration:none}
+    .wrap{max-width:1120px;margin:auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(11,16,32,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line)
+    }
+    nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px
+    }
+    .logo{font-weight:900;font-size:22px;letter-spacing:.2px}
+    .logo span{color:var(--accent)}
+    .navlinks{display:flex;gap:20px;align-items:center}
+    .navlinks a{color:var(--text);font-size:14px}
+    .nav-cta{padding:10px 14px;border:1px solid var(--line);border-radius:10px}
+    .hero{padding:92px 0 72px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:34px;
+      align-items:center
+    }
+    .eyebrow{
+      display:inline-flex;
+      gap:8px;align-items:center;
+      padding:7px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:#cbd5ea;font-size:13px;font-weight:700
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+    h1{
+      font-size:58px;line-height:1.02;
+      margin:18px 0 18px;
+      max-width:760px
+    }
+    .hero p{font-size:19px;color:var(--muted);max-width:700px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{
+      display:inline-block;
+      padding:14px 20px;
+      border-radius:12px;
+      font-weight:800
+    }
+    .primary{
+      color:#08101d;
+      background:linear-gradient(135deg,var(--accent),#9cc6ff)
+    }
+    .secondary{
+      color:var(--text);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02)
+    }
+    .hero-card{
+      border:1px solid var(--line);
+      background:linear-gradient(145deg,#151f37,#101729);
+      min-height:360px;
+      border-radius:28px;
+      padding:24px;
+      box-shadow:0 28px 80px rgba(0,0,0,.28);
+      position:relative;overflow:hidden
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      width:220px;height:220px;border-radius:50%;
+      right:-60px;top:-70px;
+      background:rgba(110,168,254,.17);
+      filter:blur(4px)
+    }
+    .mini-window{
+      border:1px solid #33415f;border-radius:16px;
+      background:#0c1323;
+      margin-top:24px;
+      overflow:hidden;
+      position:relative;
+      z-index:2
+    }
+    .browserbar{
+      height:42px;
+      display:flex;align-items:center;gap:7px;
+      padding:0 14px;
+      border-bottom:1px solid #283550
+    }
+    .browserbar i{width:9px;height:9px;border-radius:50%;background:#53627e;display:block}
+    .mock{
+      padding:26px;
+      min-height:210px;
+      background:
+        linear-gradient(120deg,rgba(110,168,254,.10),transparent 40%),
+        #111a2d
+    }
+    .mock .line{height:12px;border-radius:10px;background:#33415d;margin-bottom:12px}
+    .mock .line.short{width:55%}
+    .mock .line.med{width:78%}
+    .mock .button{width:130px;height:36px;border-radius:9px;background:var(--accent);margin-top:22px}
+    section{padding:68px 0}
+    h2{font-size:38px;margin:0 0 10px}
+    .lead{color:var(--muted);margin:0 0 30px;font-size:17px}
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px
+    }
+    .project{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:20px;
+      overflow:hidden;
+      transition:transform .2s ease,border-color .2s ease
+    }
+    .project:hover{transform:translateY(-4px);border-color:#40527b}
+    .thumb{height:190px;position:relative;overflow:hidden}
+    .thumb.cafe{background:linear-gradient(135deg,#c78b61,#74472e)}
+    .thumb.barber{background:linear-gradient(135deg,#262b34,#0d1014)}
+    .thumb.carwash{background:linear-gradient(135deg,#65c8ef,#0d6ea4)}
+    .thumb:after{
+      content:"";
+      position:absolute;
+      width:160px;height:100px;
+      left:50%;top:50%;
+      transform:translate(-50%,-50%) rotate(-7deg);
+      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:14px;
+      box-shadow:0 18px 40px rgba(0,0,0,.2)
+    }
+    .project-body{padding:20px}
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      padding:5px 9px;
+      border-radius:999px;
+      color:#cbd8ef;
+      border:1px solid #33415e;
+      margin-bottom:10px
+    }
+    .project h3{margin:0 0 8px;font-size:21px}
+    .project p{color:var(--muted);margin:0 0 16px;font-size:15px}
+    .project a{color:#b9d5ff;font-weight:800}
+    .features{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px
+    }
+    .feature{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.025);
+      border-radius:18px;
+      padding:22px
+    }
+    .feature b{display:block;font-size:18px;margin-bottom:8px}
+    .feature p{color:var(--muted);margin:0;font-size:14px}
+    .process{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px
+    }
+    .step{
+      border-top:2px solid #354569;
+      padding-top:16px
+    }
+    .step span{
+      display:inline-grid;place-items:center;
+      width:34px;height:34px;border-radius:10px;
+      background:#1b2b4d;color:#cfe2ff;font-weight:900;
+      margin-bottom:12px
+    }
+    .step h3{margin:0 0 7px;font-size:18px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .contact{
+      border:1px solid #394a70;
+      border-radius:26px;
+      padding:34px;
+      background:
+        radial-gradient(circle at right top,rgba(143,124,255,.16),transparent 34%),
+        linear-gradient(135deg,#15203a,#11182b)
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+      align-items:center
+    }
+    .contact h2{margin-bottom:8px}
+    .contact p{color:#b9c4da;margin:0}
+    .contact .buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:14px
+    }
+    @media(max-width:900px){
+      .hero-grid,.contact-grid{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr 1fr}
+      .features,.process{grid-template-columns:1fr 1fr}
+      .contact .buttons{justify-content:flex-start}
+      h1{font-size:46px}
+    }
+    @media(max-width:620px){
+      .navlinks a:not(.nav-cta){display:none}
+      .projects,.features,.process{grid-template-columns:1fr}
+      h1{font-size:36px}
+      h2{font-size:30px}
+      .hero{padding-top:68px}
+      .hero-card{min-height:300px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">RIZAT <span>WEB</span></div>
+      <div class="navlinks">
+        <a href="#works">Работы</a>
+        <a href="#services">Услуги</a>
+        <a href="#process">Как работаю</a>
+        <a class="nav-cta" href="#contact">Связаться</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Создание сайтов для малого бизнеса</div>
+        <h1>Простой сайт, который помогает клиенту связаться с вами</h1>
+        <p>
+          Делаю современные одностраничные сайты для услуг, кафе, автомоек,
+          барбершопов и других небольших бизнесов. Адаптация под телефон,
+          WhatsApp, услуги, цены и контакты.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#works">Посмотреть работы</a>
+          <a class="btn secondary" href="https://wa.me/77760104953">Написать в WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="eyebrow">Портфолио</div>
+        <div class="mini-window">
+          <div class="browserbar"><i></i><i></i><i></i></div>
+          <div class="mock">
+            <div class="line short"></div>
+            <div class="line med"></div>
+            <div class="line"></div>
+            <div class="button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="wrap">
+      <h2>Примеры работ</h2>
+      <p class="lead">Три демонстрационных сайта для разных видов бизнеса.</p>
+
+      <div class="projects">
+        <article class="project">
+          <div class="thumb cafe"></div>
+          <div class="project-body">
+            <span class="tag">Кофейня</span>
+            <h3>«Тёплый двор»</h3>
+            <p>Меню, цены, бронь столика и кнопка WhatsApp.</p>
+            <a href="cafe.html" target="_blank">Открыть демо →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="thumb barber"></div>
+          <div class="project-body">
+            <span class="tag">Барбершоп</span>
+            <h3>«Стриж»</h3>
+            <p>Услуги, мастера, стоимость и быстрая запись.</p>
+            <a href="barbershop.html" target="_blank">Открыть демо →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="thumb carwash"></div>
+          <div class="project-body">
+            <span class="tag">Автомойка</span>
+            <h3>«Блеск»</h3>
+            <p>Прайс, преимущества, контакты и запись онлайн.</p>
+            <a href="carwash.html" target="_blank">Открыть демо →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>Что входит в сайт</h2>
+      <p class="lead">Базовый вариант, который подходит большинству небольших бизнесов.</p>
+
+      <div class="features">
+        <div class="feature">
+          <b>Адаптация под телефон</b>
+          <p>Сайт удобно выглядит на смартфоне, планшете и компьютере.</p>
+        </div>
+        <div class="feature">
+          <b>WhatsApp и звонок</b>
+          <p>Клиент может сразу написать или позвонить одним нажатием.</p>
+        </div>
+        <div class="feature">
+          <b>Услуги и цены</b>
+          <p>Добавим понятный список услуг, стоимость и преимущества.</p>
+        </div>
+        <div class="feature">
+          <b>Контакты бизнеса</b>
+          <p>Адрес, режим работы, телефон и нужные ссылки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <h2>Как проходит работа</h2>
+      <p class="lead">Для начала достаточно основных данных о бизнесе.</p>
+
+      <div class="process">
+        <div class="step"><span>1</span><h3>Вы присылаете данные</h3><p>Название, услуги, цены, телефон, WhatsApp и адрес.</p></div>
+        <div class="step"><span>2</span><h3>Я собираю сайт</h3><p>Делаю структуру, оформление и мобильную версию.</p></div>
+        <div class="step"><span>3</span><h3>Вы смотрите результат</h3><p>Показываю готовый вариант и вношу согласованные правки.</p></div>
+        <div class="step"><span>4</span><h3>Сайт готов</h3><p>После утверждения сайт можно размещать в интернете.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div class="contact-grid">
+          <div>
+            <h2>Нужен сайт для вашего бизнеса?</h2>
+            <p>Напишите, чем вы занимаетесь, и я предложу подходящий вариант сайта.</p>
+          </div>
+          <div class="buttons">
+            <a class="btn primary" href="https://wa.me/77760104953">WhatsApp</a>
+            <a class="btn secondary" href="tel:+77785424098">Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Rizat Web · Демо-портфолио</div>
+</footer>
+
+</body>
+</html>

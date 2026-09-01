@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Автомойка «Блеск»</title>
+<meta name="description" content="Автомойка: кузов, салон, комплексная мойка и химчистка. Запись через WhatsApp.">
+<style>
+:root{--bg:#eef7fb;--ink:#102532;--muted:#5d7481;--accent:#0b82c5;--accent2:#084d75;--card:#ffffff;--line:#cfe3ec}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{text-decoration:none}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(238,247,251,.96);border-bottom:1px solid var(--line);z-index:5}
+nav{min-height:68px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;font-size:21px}.logo span{color:var(--accent)}
+nav .links{display:flex;gap:18px}nav a{color:var(--ink)}
+.hero{padding:86px 0 64px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:#d9eef8;color:#09679a;font-weight:800;font-size:13px}
+h1{font-size:56px;line-height:1.04;margin:18px 0 16px}.hero p,.lead{color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 20px;border-radius:11px;font-weight:800}.primary{background:var(--accent);color:white}.secondary{border:1px solid var(--line);color:var(--ink);background:white}
+.visual{height:330px;border-radius:26px;background:
+radial-gradient(circle at 30% 22%,rgba(255,255,255,.95) 0 5%,transparent 6%),
+radial-gradient(circle at 70% 38%,rgba(255,255,255,.85) 0 4%,transparent 5%),
+linear-gradient(160deg,#55c4ef,#0b82c5 58%,#07537d);
+position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(11,130,197,.22)}
+.visual:before{content:"🚗";font-size:120px;position:absolute;left:50%;top:50%;transform:translate(-50%,-48%)}
+.visual:after{content:"••••••••••";letter-spacing:10px;color:#b9ebff;font-size:34px;position:absolute;left:24px;bottom:20px;opacity:.7}
+section{padding:58px 0}h2{font-size:34px;margin:0 0 8px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:17px}.card h3{margin:0 0 8px}.price{font-size:22px;font-weight:900;color:var(--accent2);margin-top:10px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.icon{font-size:30px;margin-bottom:10px}
+.contact{background:linear-gradient(135deg,#0b82c5,#07537d);color:white;border-radius:24px;padding:30px}.contact .lead{color:#d9f1ff}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr}h1{font-size:42px}.visual{height:250px}nav .links{display:none}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}h1{font-size:35px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav><div class="logo">АВТОМОЙКА <span>БЛЕСК</span></div><div class="links"><a href="#services">Услуги</a><a href="#why">Почему мы</a><a href="#contact">Контакты</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div>
+<span class="badge">Демо-сайт автомойки</span>
+<h1>Чистый автомобиль без долгого ожидания</h1>
+<p>Мойка кузова, салона, комплекс и химчистка. Запись через WhatsApp, понятный прайс и удобный сайт для телефона.</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/77000000000">Записаться в WhatsApp</a><a class="btn secondary" href="#services">Посмотреть цены</a></div>
+</div><div class="visual"></div></div></section>
+
+<section id="services"><div class="wrap"><h2>Услуги и цены</h2><p class="lead">Все позиции можно заменить под реальный прайс клиента.</p>
+<div class="cards">
+<div class="card"><h3>Мойка кузова</h3><p>Пена, ручная мойка и сушка.</p><div class="price">от 3 500 ₸</div></div>
+<div class="card"><h3>Комплекс</h3><p>Кузов + уборка салона.</p><div class="price">от 6 500 ₸</div></div>
+<div class="card"><h3>Химчистка</h3><p>Глубокая очистка салона.</p><div class="price">от 25 000 ₸</div></div>
+<div class="card"><h3>Чернение шин</h3><p>Финишный уход после мойки.</p><div class="price">от 1 000 ₸</div></div>
+</div></div></section>
+
+<section id="why"><div class="wrap"><h2>Почему удобно</h2><div class="benefits">
+<div class="card"><div class="icon">⏱</div><h3>Быстрая запись</h3><p>Клиент сразу переходит в WhatsApp без длинных форм.</p></div>
+<div class="card"><div class="icon">✨</div><h3>Понятный прайс</h3><p>Основные услуги и цены видны ещё до звонка.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Работает на телефоне</h3><p>Сайт адаптирован под мобильные устройства.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact"><h2>Запишитесь на мойку</h2>
+<p class="lead">Ваш город, ул. Примерная, 35 · +7 700 000 00 00 · ежедневно 08:00–23:00</p>
+<div class="actions"><a class="btn primary" style="background:white;color:#07537d" href="https://wa.me/77000000000">WhatsApp</a><a class="btn secondary" style="background:transparent;color:white;border-color:#65bde7" href="tel:+77000000000">Позвонить</a></div>
+</div></div></section>
+</main><footer><div class="wrap">© 2026 Автомойка «Блеск». Демо-версия сайта.</div></footer>
+</body></html>

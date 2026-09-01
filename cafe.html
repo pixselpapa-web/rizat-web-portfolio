@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Кофейня «Тёплый двор»</title>
+<meta name="description" content="Уютная кофейня: кофе, десерты, завтраки и доставка.">
+<style>
+:root{--bg:#f7f1e8;--ink:#2f241f;--muted:#75665e;--accent:#9a5f3d;--card:#fffaf4;--line:#e7d8c9}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{text-decoration:none}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(247,241,232,.96);border-bottom:1px solid var(--line);z-index:5}
+nav{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font-weight:800;font-size:21px}
+nav .links{display:flex;gap:18px}nav a{color:var(--ink)}
+.hero{padding:84px 0 62px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:#efe0d2;color:#7b482c;font-size:13px;font-weight:700}
+h1{font-size:54px;line-height:1.05;margin:18px 0 16px}.hero p,.lead{color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{padding:14px 20px;border-radius:12px;font-weight:700}
+.primary{background:var(--accent);color:white}.secondary{border:1px solid var(--line);color:var(--ink);background:#fff8f0}
+.visual{min-height:330px;border-radius:28px;background:
+radial-gradient(circle at 35% 35%,#fff 0 8%,transparent 9%),
+radial-gradient(circle at 50% 50%,#7e4d32 0 28%,#d8b899 29% 33%,#f5e6d6 34% 47%,#b66f47 48% 53%,#6a3e28 54% 57%,transparent 58%),
+linear-gradient(135deg,#ead3bc,#b97852);box-shadow:0 24px 60px rgba(95,59,35,.18)}
+section{padding:58px 0}h2{font-size:34px;margin:0 0 8px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:18px}.card h3{margin:0 0 8px}.price{font-size:22px;font-weight:800;color:var(--accent);margin-top:10px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:16px}.item{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.contact{background:#3a2b24;color:white;border-radius:24px;padding:30px}.contact .lead{color:#e6d8ce}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:800px){.hero-grid,.menu{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.visual{min-height:250px}h1{font-size:40px}nav .links{display:none}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav><div class="logo">ТЁПЛЫЙ ДВОР ☕</div><div class="links"><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#contact">Контакты</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div>
+<span class="badge">Демо-сайт кофейни</span>
+<h1>Кофе, десерты и уютное место рядом</h1>
+<p>Завтраки весь день, авторские напитки, свежая выпечка и возможность заказать столик через WhatsApp.</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/77000000000">Забронировать столик</a><a class="btn secondary" href="#menu">Посмотреть меню</a></div>
+</div><div class="visual" aria-label="Декоративная чашка кофе"></div></div></section>
+
+<section id="menu"><div class="wrap"><h2>Популярное меню</h2><p class="lead">Цены примерные — легко заменить под клиента.</p>
+<div class="menu">
+<div>
+<div class="item"><span>Капучино 300 мл</span><b>1 200 ₸</b></div>
+<div class="item"><span>Латте 350 мл</span><b>1 400 ₸</b></div>
+<div class="item"><span>Американо</span><b>900 ₸</b></div>
+</div>
+<div>
+<div class="item"><span>Круассан</span><b>1 100 ₸</b></div>
+<div class="item"><span>Чизкейк</span><b>1 700 ₸</b></div>
+<div class="item"><span>Завтрак с омлетом</span><b>2 900 ₸</b></div>
+</div></div></div></section>
+
+<section id="about"><div class="wrap"><h2>Почему нас выбирают</h2><div class="cards">
+<div class="card"><h3>Свежий кофе</h3><p>Зёрна обжариваются небольшими партиями.</p></div>
+<div class="card"><h3>Завтраки весь день</h3><p>Не нужно спешить — любимые завтраки доступны до закрытия.</p></div>
+<div class="card"><h3>Быстрая бронь</h3><p>Один клик — и клиент пишет в WhatsApp.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact"><h2>Зайдите на кофе сегодня</h2>
+<p class="lead">Ваш город, ул. Примерная, 12 · +7 700 000 00 00 · ежедневно 08:00–22:00</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/77000000000">Написать в WhatsApp</a><a class="btn secondary" style="color:white;border-color:#6a574d;background:transparent" href="tel:+77000000000">Позвонить</a></div>
+</div></div></section>
+</main><footer><div class="wrap">© 2026 Кофейня «Тёплый двор». Демо-версия сайта.</div></footer>
+</body></html>
