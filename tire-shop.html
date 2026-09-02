@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TirePro — шиномонтажная мастерская</title>
+<meta name="description" content="Шиномонтаж, балансировка, ремонт проколов и сезонная замена шин. Запись через WhatsApp.">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--text:#f4f6f8;--muted:#9da7b3;--accent:#ffb000;--line:#2a313b}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(13,17,23,.96);border-bottom:1px solid var(--line);z-index:5}
+nav{min-height:68px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900}.logo span{color:var(--accent)}
+nav .links{display:flex;gap:18px}nav a{color:var(--text)}
+.hero{padding:86px 0 64px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.badge{display:inline-block;background:#241d0d;color:#ffd46a;border:1px solid #5a4712;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:800}
+h1{font-size:56px;line-height:1.03;margin:18px 0 16px}.hero p,.lead{color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:14px 20px;border-radius:11px;font-weight:800}
+.primary{background:var(--accent);color:#171108}.secondary{border:1px solid var(--line);color:var(--text)}
+.visual{height:330px;border-radius:26px;background:
+radial-gradient(circle at center,#1f252d 0 20%,#69727d 21% 25%,#11161c 26% 51%,#303741 52% 57%,#090c10 58%);
+border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+section{padding:58px 0}h2{font-size:34px;margin:0 0 8px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:17px}
+.card h3{margin:0 0 8px}.price{font-size:22px;font-weight:900;color:var(--accent);margin-top:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.num{width:36px;height:36px;border-radius:10px;background:#2b230e;color:#ffd46a;display:grid;place-items:center;font-weight:900;margin-bottom:10px}
+.contact{background:linear-gradient(135deg,#1a1f26,#101419);border:1px solid var(--line);border-radius:24px;padding:30px}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}h1{font-size:42px}.visual{height:250px}nav .links{display:none}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}h1{font-size:35px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<div class="logo">TIRE<span>PRO</span></div>
+<div class="links"><a href="#services">Услуги</a><a href="#how">Как работаем</a><a href="#contact">Контакты</a></div>
+</nav></div></header>
+
+<main>
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="badge">Пример сайта шиномонтажной мастерской</span>
+<h1>Шиномонтаж без долгого ожидания</h1>
+<p>Сезонная замена шин, балансировка, ремонт проколов и проверка давления. Быстрая запись через WhatsApp.</p>
+<div class="actions">
+<a class="btn primary" href="https://wa.me/77000000000">Записаться в WhatsApp</a>
+<a class="btn secondary" href="#services">Посмотреть цены</a>
+</div>
+</div>
+<div class="visual" aria-label="Декоративное колесо"></div>
+</div>
+</section>
+
+<section id="services"><div class="wrap">
+<h2>Услуги и цены</h2>
+<p class="lead">Все позиции можно заменить на реальный прайс мастерской.</p>
+<div class="cards">
+<div class="card"><h3>Сезонная замена</h3><p>Снятие, установка и проверка колёс.</p><div class="price">от 6 000 ₸</div></div>
+<div class="card"><h3>Балансировка</h3><p>Устранение дисбаланса колёс.</p><div class="price">от 2 000 ₸</div></div>
+<div class="card"><h3>Ремонт прокола</h3><p>Диагностика и восстановление шины.</p><div class="price">от 2 500 ₸</div></div>
+<div class="card"><h3>Проверка давления</h3><p>Проверка и подкачка колёс.</p><div class="price">от 500 ₸</div></div>
+</div></div></section>
+
+<section id="how"><div class="wrap">
+<h2>Как проходит запись</h2>
+<div class="steps">
+<div class="card"><div class="num">1</div><h3>Клиент пишет</h3><p>Через WhatsApp или звонок.</p></div>
+<div class="card"><div class="num">2</div><h3>Выбираем время</h3><p>Подтверждаем удобное время приезда.</p></div>
+<div class="card"><div class="num">3</div><h3>Выполняем работу</h3><p>Обслуживаем автомобиль и проверяем результат.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact">
+<h2>Запишитесь на шиномонтаж</h2>
+<p class="lead">Ваш город, ул. Примерная, 10 · +7 700 000 00 00 · ежедневно 09:00–21:00</p>
+<div class="actions">
+<a class="btn primary" href="https://wa.me/77000000000">WhatsApp</a>
+<a class="btn secondary" href="tel:+77000000000">Позвонить</a>
+</div>
+</div></div></section>
+</main>
+<footer><div class="wrap">© 2026 TirePro · Пример проекта.</div></footer>
+</body>
+</html>

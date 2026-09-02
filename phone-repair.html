@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SmartFix — ремонт телефонов</title>
+<style>
+:root{--bg:#0b1220;--card:#121c2e;--text:#f3f7fb;--muted:#9fb0c5;--accent:#38bdf8;--line:#26354c}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none}.wrap{max-width:1050px;margin:auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:#0b1220;position:sticky;top:0}
+nav{min-height:68px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900}.logo span{color:var(--accent)}
+nav a{color:var(--text);margin-left:18px}.hero{padding:80px 0}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.badge{display:inline-block;background:#102b40;color:#7dd3fc;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700}
+h1{font-size:52px;line-height:1.05;margin:18px 0}.hero p,.lead{color:var(--muted);font-size:18px}
+.btn{display:inline-block;padding:14px 20px;border-radius:12px;font-weight:800;margin-right:10px;margin-top:16px}
+.primary{background:var(--accent);color:#062031}.secondary{border:1px solid var(--line);color:var(--text)}
+.visual{height:320px;border-radius:28px;background:linear-gradient(145deg,#182840,#0c1525);border:1px solid var(--line);display:grid;place-items:center;font-size:120px}
+section{padding:56px 0}h2{font-size:34px;margin:0 0 8px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}.price{font-size:22px;font-weight:900;color:#7dd3fc;margin-top:10px}
+.contact{background:linear-gradient(135deg,#10243a,#0c1a2b);border:1px solid #2b4865;border-radius:24px;padding:30px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted)}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}h1{font-size:38px}.visual{height:240px}nav div:last-child{display:none}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="wrap"><nav><div class="logo">SMART<span>FIX</span></div><div><a href="#services">Услуги</a><a href="#contact">Контакты</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap grid"><div><span class="badge">Пример сайта сервисного центра</span><h1>Ремонт телефонов и техники</h1>
+<p>Диагностика, понятные цены и быстрая связь через WhatsApp.</p>
+<a class="btn primary" href="https://wa.me/77000000000">Узнать стоимость</a><a class="btn secondary" href="#services">Услуги</a>
+</div><div class="visual">📱</div></div></section>
+<section id="services"><div class="wrap"><h2>Что ремонтируем</h2><p class="lead">Цены примерные и настраиваются под реальный сервис.</p>
+<div class="cards"><div class="card"><h3>Замена экрана</h3><p>Для популярных смартфонов.</p><div class="price">от 12 000 ₸</div></div>
+<div class="card"><h3>Аккумулятор</h3><p>Диагностика и замена.</p><div class="price">от 8 000 ₸</div></div>
+<div class="card"><h3>Разъём зарядки</h3><p>Чистка, ремонт или замена.</p><div class="price">от 7 000 ₸</div></div>
+<div class="card"><h3>Ноутбуки</h3><p>Диагностика и ремонт.</p><div class="price">от 5 000 ₸</div></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="contact"><h2>Нужен ремонт?</h2><p class="lead">Ваш город · +7 700 000 00 00 · ежедневно 10:00–20:00</p>
+<a class="btn primary" href="https://wa.me/77000000000">WhatsApp</a></div></div></section>
+</main><footer><div class="wrap">© 2026 SmartFix · Пример проекта.</div></footer>
+</body></html>
