@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пример QR-меню — Rizat Web</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#2b1d16;
+      background:#f7efe6;
+    }
+    .hero{
+      padding:32px 20px 62px;
+      background:
+        radial-gradient(circle at top left,rgba(255,210,136,.38),transparent 30%),
+        linear-gradient(135deg,#3d241b,#6c3a25 58%,#b36a3f);
+      color:#fff;
+    }
+    .wrap{max-width:980px;margin:auto}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .back{color:#fff;text-decoration:none;font-weight:800}
+    .demo{font-size:13px;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);font-weight:800}
+    .hero-content{margin-top:56px;max-width:680px}
+    .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.14em;font-weight:900;color:#ffd7a8}
+    h1{font-size:64px;line-height:.98;margin:14px 0 16px}
+    .hero p{font-size:18px;line-height:1.7;color:#f5ded0;max-width:620px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .chips span{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);font-size:14px;font-weight:700}
+    .menu{padding:54px 20px 74px}
+    .section-title{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:22px}
+    .section-title h2{font-size:34px;margin:0}
+    .section-title p{margin:0;color:#82685a}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .item{background:#fff;border:1px solid #ead9ca;border-radius:20px;padding:20px;display:flex;justify-content:space-between;gap:18px;box-shadow:0 12px 28px rgba(84,52,34,.06)}
+    .item h3{margin:0 0 7px;font-size:20px}
+    .item p{margin:0;color:#806a5e;font-size:14px;line-height:1.55}
+    .price{font-size:19px;font-weight:900;white-space:nowrap;color:#9a4f2a}
+    .cta{margin-top:24px;padding:24px;border-radius:22px;background:#2f211b;color:#fff;display:flex;justify-content:space-between;gap:18px;align-items:center}
+    .cta h3{margin:0 0 6px;font-size:22px}
+    .cta p{margin:0;color:#dccac0}
+    .button{display:inline-block;padding:12px 16px;border-radius:12px;background:#ffd39b;color:#2f211b;font-weight:900;text-decoration:none;white-space:nowrap}
+    .note{text-align:center;color:#7a6b63;font-size:13px;padding:0 20px 28px}
+    @media(max-width:720px){
+      h1{font-size:46px}
+      .grid{grid-template-columns:1fr}
+      .section-title,.cta{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="top">
+        <a class="back" href="index.html#extra-examples">← Назад в Rizat Web</a>
+        <span class="demo">Демо · QR-меню</span>
+      </div>
+      <div class="hero-content">
+        <div class="eyebrow">Кофейня · цифровое меню</div>
+        <h1>Brown Cup</h1>
+        <p>Пример меню, которое открывается по QR-коду со столика, стойки или визитки. Гость сразу видит позиции, цены и может быстро связаться с заведением.</p>
+        <div class="chips"><span>Удобно с телефона</span><span>Цены и состав</span><span>Можно обновлять</span><span>Кнопка WhatsApp</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="menu">
+    <div class="wrap">
+      <div class="section-title"><h2>Кофе</h2><p>Популярные позиции</p></div>
+      <div class="grid">
+        <article class="item"><div><h3>Капучино</h3><p>Эспрессо, молоко, нежная молочная пена.</p></div><div class="price">1 200 ₸</div></article>
+        <article class="item"><div><h3>Латте</h3><p>Мягкий кофейный вкус и больше молока.</p></div><div class="price">1 300 ₸</div></article>
+        <article class="item"><div><h3>Раф ванильный</h3><p>Эспрессо, сливки и лёгкая ваниль.</p></div><div class="price">1 550 ₸</div></article>
+        <article class="item"><div><h3>Американо</h3><p>Классический чёрный кофе без молока.</p></div><div class="price">900 ₸</div></article>
+      </div>
+
+      <div class="section-title" style="margin-top:42px"><h2>Десерты</h2><p>К кофе и не только</p></div>
+      <div class="grid">
+        <article class="item"><div><h3>Чизкейк</h3><p>Сливочный чизкейк с ягодным соусом.</p></div><div class="price">1 800 ₸</div></article>
+        <article class="item"><div><h3>Круассан</h3><p>Хрустящий круассан со сливочным маслом.</p></div><div class="price">1 100 ₸</div></article>
+      </div>
+
+      <section class="cta">
+        <div><h3>Хотите такой формат для своего заведения?</h3><p>В реальном проекте добавляются ваши позиции, цены, логотип, контакты и фирменный стиль.</p></div>
+        <a class="button" href="index.html#contact">Обсудить проект</a>
+      </section>
+    </div>
+  </main>
+  <div class="note">Демонстрационный пример. Название, меню и цены вымышлены.</div>
+</body>
+</html>
