@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пример электронной визитки — Rizat Web</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#172033;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(255,200,87,.30),transparent 28%),
+        radial-gradient(circle at 85% 80%,rgba(121,98,255,.22),transparent 30%),
+        #f5f1ea;
+      display:grid;
+      place-items:center;
+      padding:28px
+    }
+    .wrap{width:min(960px,100%)}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+    .back{color:#172033;font-weight:800;text-decoration:none}
+    .label{font-size:13px;font-weight:800;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid #ded7cc}
+    .card{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      overflow:hidden;
+      border-radius:30px;
+      background:#fff;
+      box-shadow:0 28px 80px rgba(43,36,28,.18)
+    }
+    .info{padding:54px}
+    .eyebrow{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#795cff}
+    h1{font-size:54px;line-height:1;margin:14px 0 12px}
+    .role{font-size:20px;color:#6c7180;margin-bottom:30px}
+    .services{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+    .services span{padding:9px 12px;border-radius:999px;background:#f4f1ff;color:#4c3bb3;font-size:14px;font-weight:700}
+    .contacts{display:grid;gap:12px}
+    .contact{padding:14px 16px;border-radius:14px;background:#f6f7fa;font-weight:700}
+    .side{
+      min-height:500px;
+      padding:42px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      background:linear-gradient(145deg,#181c2b,#523bc8 62%,#7f68ff)
+    }
+    .brand{font-size:18px;font-weight:900;letter-spacing:.06em}
+    .monogram{font-size:130px;line-height:1;font-weight:900;opacity:.92}
+    .qr{
+      width:132px;height:132px;
+      padding:13px;
+      background:#fff;
+      border-radius:18px;
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:4px
+    }
+    .qr i{background:#121522;border-radius:2px}
+    .qr i:nth-child(3n){background:transparent}
+    .note{margin-top:18px;color:#f0ecff;max-width:280px;font-size:14px}
+    .footer-note{text-align:center;color:#666d7c;margin-top:18px;font-size:13px}
+    @media(max-width:760px){
+      .card{grid-template-columns:1fr}
+      .info{padding:34px 26px}
+      .side{min-height:360px;padding:30px}
+      h1{font-size:42px}
+      .monogram{font-size:92px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <a class="back" href="index.html#extra-examples">← Назад в Rizat Web</a>
+      <span class="label">Демо · электронная визитка</span>
+    </div>
+
+    <section class="card">
+      <div class="info">
+        <div class="eyebrow">Персональный мастер</div>
+        <h1>Алина<br>Соколова</h1>
+        <div class="role">Визажист · Павлодар</div>
+        <div class="services">
+          <span>Дневной макияж</span>
+          <span>Вечерний образ</span>
+          <span>Свадебный макияж</span>
+        </div>
+        <div class="contacts">
+          <div class="contact">WhatsApp: +7 700 000 00 00</div>
+          <div class="contact">Instagram: @alina.makeup</div>
+          <div class="contact">Запись: ежедневно 10:00–20:00</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="brand">ALINA · MAKEUP</div>
+        <div class="monogram">AS</div>
+        <div>
+          <div class="qr" aria-label="Демонстрационный QR-код">
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="note">QR-код можно вести на WhatsApp, сайт, каталог, меню или страницу с контактами.</div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-note">Демонстрационный пример дизайна. Контактные данные вымышлены.</div>
+  </main>
+</body>
+</html>
