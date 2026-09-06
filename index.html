@@ -200,7 +200,9 @@
       background:linear-gradient(145deg,rgba(21,30,52,.95),rgba(15,22,39,.95));
       border-radius:20px;
       padding:22px;
-      min-height:190px;
+      min-height:230px;
+      display:flex;
+      flex-direction:column;
       transition:transform .2s ease,border-color .2s ease
     }
     .service-card:hover{transform:translateY(-4px);border-color:#40527b}
@@ -216,6 +218,13 @@
     }
     .service-card h3{margin:0 0 8px;font-size:19px}
     .service-card p{margin:0;color:var(--muted);font-size:14px}
+    .service-price{
+      margin-top:auto;
+      padding-top:18px;
+      font-size:21px;
+      font-weight:900;
+      color:#b9d5ff
+    }
     .service-note{
       margin-top:18px;
       padding:18px 20px;
@@ -428,55 +437,63 @@
   <section id="extra">
     <div class="wrap">
       <h2>Дополнительные услуги</h2>
-      <p class="lead">Можно заказать отдельно или добавить к сайту, чтобы всё было оформлено в одном стиле.</p>
+      <p class="lead">Можно заказать отдельно или добавить к сайту. Указана стартовая стоимость — точная цена зависит от объёма работы.</p>
 
       <div class="extra-services">
         <article class="service-card">
           <div class="service-icon">↻</div>
           <h3>Редизайн сайта</h3>
           <p>Обновление внешнего вида, блоков, текстов, кнопок и мобильной версии существующего сайта.</p>
+          <div class="service-price">от 12 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">⌕</div>
           <h3>Базовая SEO-настройка</h3>
           <p>Заголовки, описания страниц, структура, изображения, sitemap и подготовка к индексации.</p>
+          <div class="service-price">от 7 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">▦</div>
           <h3>QR-меню и QR-коды</h3>
           <p>Удобное меню или страница по QR-коду для кафе, услуг, прайса, акции или контактов.</p>
+          <div class="service-price">от 7 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">₸</div>
           <h3>Прайс-листы</h3>
           <p>Аккуратный электронный прайс для сайта, WhatsApp, отправки клиентам или подготовки к печати.</p>
+          <div class="service-price">от 5 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">▣</div>
           <h3>Визитки и карточки</h3>
           <p>Дизайн визиток, карточек товаров и услуг, контактных карточек и материалов с QR-кодом.</p>
+          <div class="service-price">от 4 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">★</div>
           <h3>Баннеры и реклама</h3>
           <p>Карточки для акций, скидок, объявлений, сертификатов и рекламных материалов для бизнеса.</p>
+          <div class="service-price">от 4 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">▤</div>
           <h3>Сайт-каталог</h3>
           <p>Каталог товаров или услуг с фотографиями, ценами, описаниями и быстрым заказом через WhatsApp.</p>
+          <div class="service-price">от 20 000 ₸</div>
         </article>
 
         <article class="service-card">
           <div class="service-icon">✓</div>
           <h3>Поддержка сайта</h3>
           <p>Обновление цен, фотографий, акций, контактов, услуг и небольшие изменения после запуска.</p>
+          <div class="service-price">от 5 000 ₸ / месяц</div>
         </article>
       </div>
 
